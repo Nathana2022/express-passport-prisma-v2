@@ -29,6 +29,7 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((user, done) => {
   done(null, user)
 });
+server.use(passport.initialize())
 
 const PORT = process.env.PORT || 3002;
 const server = express();
